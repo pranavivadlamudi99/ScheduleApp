@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Main layout of the app displaying the schedule.
+ Includes:
+ - Toolbar/header
+ - Filter (radio buttons)
+ - ProgressBar for loading
+ - Error message
+ - RecyclerView for schedule list
+-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Top toolbar with title and theme toggle icon -->
+    <include
+        android:id="@+id/header"
+        layout="@layout/header_schedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Game filter options: All, Home, Away -->
+    <include
+        android:id="@+id/filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/item_filter"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Progress indicator shown while data is loading -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/filter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/progress_bar_margintop"/>
+
+    <!-- Error message if data fails to load -->
+    <TextView
+        android:id="@+id/errorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/error_message"
+        android:visibility="gone"
+        android:textColor="@color/textPrimary"
+        android:fontFamily="@font/inter_28pt_regular"
+        app:layout_constraintTop_toBottomOf="@id/progressBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/error_text_margin_top"/>
+
+    <!-- RecyclerView displaying the Schedule List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/teamSchedule"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/recycler_view_height"
+        android:layout_marginTop="@dimen/recycler_view_margin_top"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@+id/filter"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

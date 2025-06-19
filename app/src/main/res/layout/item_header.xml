@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Header view shown in the list before a group of games.
+ E.g., "REGULAR SEASON"
+-->
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/header_height"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="@dimen/header_margin"
+    android:layout_marginTop="@dimen/header_margin"
+    app:cardCornerRadius="@dimen/cardview_radius"
+    app:cardElevation="@dimen/card_elevation"
+    android:backgroundTint="@color/cardBackgroundHeader">
+
+    <com.pranavi.scheduleapp.views.ScheduleTextView
+        android:id="@+id/headerText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/header_padding"
+        android:text="@string/regular_season_text"
+        android:textSize="@dimen/item_header_textsize"
+        android:fontFamily="@font/sourcesans3_regular"
+        android:textColor="@color/textPrimary"
+        android:textStyle="bold" />
+</com.google.android.material.card.MaterialCardView>

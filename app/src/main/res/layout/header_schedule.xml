@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Toolbar layout containing:
+ - Title (SCHEDULE)
+ - Theme toggle button (moon icon)
+-->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryColor"
+        android:minHeight="@dimen/toolbar_minheight"
+        android:elevation="@dimen/toolbar_elevation"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <!-- Theme toggle icon (outline or filled moon) -->
+        <ImageView
+            android:id="@+id/themeToggleBtn"
+            android:layout_width="@dimen/theme_toggle_dimen"
+            android:layout_height="@dimen/theme_toggle_dimen"
+            android:src="@drawable/ic_moon_outline"
+            android:layout_gravity="start|center_vertical"
+            android:contentDescription="@string/theme_toggle_description"
+            android:tint="@color/white" />
+
+        <!-- App title -->
+        <TextView
+            android:id="@+id/scheduleTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_title_header"
+            android:textSize="@dimen/title_text_size"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:fontFamily="@font/robotomono_regular"
+            android:layout_gravity="center"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+</FrameLayout>

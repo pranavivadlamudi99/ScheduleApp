@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ A schedule item for a game, showing:
+ - Home and Away teams
+ - Logos
+ - Scores
+ - Date/time or status
+ - Game Center / Highlights buttons
+-->
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/item_schedule_margin"
+    android:padding="@dimen/item_schedule_padding"
+    app:cardCornerRadius="@dimen/item_schedule_corner_radius"
+    app:cardElevation="@dimen/iterm_schedule_card_elevation"
+    android:backgroundTint="@color/cardBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:minHeight="@dimen/item_schedule_minheight"
+        android:padding="@dimen/item_schedule_padding"
+        android:gravity="center_vertical">
+
+        <!-- Team Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/team_selection_margin">
+
+            <!-- Home -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <com.pranavi.scheduleapp.views.ScheduleTextView
+                    android:id="@+id/homeTeamName"
+                    android:text="@string/home_team_text"
+                    android:textSize="@dimen/item_header_textsize"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="@dimen/home_team_margin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.pranavi.scheduleapp.views.ScheduleImageView
+                    android:id="@+id/homeTeamLogo"
+                    android:layout_width="@dimen/filter_icon_size"
+                    android:layout_height="@dimen/filter_icon_size"/>
+            </LinearLayout>
+
+            <!-- Score -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginHorizontal="@dimen/item_schedule_padding">
+
+                <com.pranavi.scheduleapp.views.ScheduleTextView
+                    android:id="@+id/scoreHome"
+                    android:text="0"
+                    android:textSize="@dimen/home_score_text_size"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/scoreSeparator"
+                    android:text=" @ "
+                    android:textSize="@dimen/scoreseparator_text_size"
+                    android:layout_marginHorizontal="@dimen/iterm_schedule_card_elevation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textSecondary" />
+
+                <com.pranavi.scheduleapp.views.ScheduleTextView
+                    android:id="@+id/scoreAway"
+                    android:text="0"
+                    android:textSize="@dimen/home_score_text_size"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- Away -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <com.pranavi.scheduleapp.views.ScheduleTextView
+                    android:id="@+id/awayTeamName"
+                    android:text="@string/away_team_text"
+                    android:textSize="@dimen/item_header_textsize"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="@dimen/home_team_margin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.pranavi.scheduleapp.views.ScheduleImageView
+                    android:id="@+id/awayTeamLogo"
+                    android:layout_width="@dimen/filter_icon_size"
+                    android:layout_height="@dimen/filter_icon_size"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Match Info -->
+        <com.pranavi.scheduleapp.views.ScheduleTextView
+            android:id="@+id/matchInfo"
+            android:text="Week 1 - Sep 13 • Final"
+            android:textSize="@dimen/normal_text_size"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/recycler_view_margin_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:id="@+id/actionButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:visibility="gone"
+            android:layout_marginTop="8dp">
+
+            <com.pranavi.scheduleapp.views.ScheduleButton
+                android:id="@+id/gameCenterBtn"
+                android:text="@string/game_center_text"
+                android:layout_marginEnd="@dimen/recycler_view_margin_top"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.pranavi.scheduleapp.views.ScheduleButton
+                android:id="@+id/highlightsBtn"
+                android:text="@string/hightlights_text"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

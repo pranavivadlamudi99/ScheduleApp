@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.ScheduleApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorSecondary">@color/secondaryColor</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="colorSurface">@color/backgroundLight</item>
+        <item name="android:colorBackground">@color/backgroundLight</item>
+        <item name="colorOnBackground">@color/textPrimary</item>
+
+        <item name="android:textColorPrimary">@color/textPrimary</item>
+
+        <item name="fontFamily">@font/geologica_regular</item>
+        <item name="android:statusBarColor">@color/statusBarColor</item>
+        <item name="android:navigationBarColor">@color/navigationBarColor</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>

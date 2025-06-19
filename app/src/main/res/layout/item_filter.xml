@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Layout used to filter the game list:
+ - All Games
+ - Home
+ - Away
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="@dimen/filter_padding">
+
+    <ImageView
+        android:layout_width="@dimen/filter_icon_size"
+        android:layout_height="@dimen/filter_icon_size"
+        android:layout_marginEnd="@dimen/filter_icon_marginend"
+        android:contentDescription="@string/filter_icon_description"
+        android:tint="@color/textPrimary"
+        android:src="@drawable/funnel_outline" />
+
+    <RadioGroup
+        android:id="@+id/gameFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_all"
+            android:checked="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/radioButtonColor"
+            android:text="@string/all_games" />
+
+        <RadioButton
+            android:id="@+id/radio_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/radioButtonColor"
+            android:text="@string/home_text" />
+
+        <RadioButton
+            android:id="@+id/radio_away"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/radioButtonColor"
+            android:text="@string/away_text" />
+    </RadioGroup>
+
+</LinearLayout>

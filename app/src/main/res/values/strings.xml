@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ScheduleApp</string>
+    <string name="packers">Packers</string>
+    <string name="error_message">Failed to load schedule</string>
+    <string name="theme_toggle_description">Toggle theme</string>
+    <string name="app_title_header">SCHEDULE</string>
+    <string name="filter_icon_description">FilterIcon</string>
+    <string name="all_games">All Games</string>
+    <string name="home_text">Home</string>
+    <string name="away_text">Away</string>
+    <string name="regular_season_text">REGULAR SEASON</string>
+    <string name="home_team_text">HOME</string>
+    <string name="away_team_text">AWAY</string>
+    <string name="game_center_text">Game Center</string>
+    <string name="hightlights_text">Highlights</string>"
+</resources>

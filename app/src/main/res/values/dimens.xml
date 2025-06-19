@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="bye_week_text_size">40sp</dimen>
+    <dimen name="normal_text_size">14sp</dimen>
+    <dimen name="progress_bar_margintop">16dp</dimen>
+    <dimen name="error_text_margin_top">12dp</dimen>
+    <dimen name="recycler_view_height">0dp</dimen>
+    <dimen name="recycler_view_margin_top">8dp</dimen>
+    <dimen name="toolbar_minheight">85dp</dimen>
+    <dimen name="toolbar_elevation">4dp</dimen>
+    <dimen name="theme_toggle_dimen">24dp</dimen>
+    <dimen name="title_text_size">30sp</dimen>
+    <dimen name="filter_padding">10dp</dimen>
+    <dimen name="filter_icon_size">20dp</dimen>
+    <dimen name="filter_icon_marginend">8dp</dimen>
+    <dimen name="header_height">60dp</dimen>
+    <dimen name="header_margin">12dp</dimen>
+    <dimen name="cardview_radius">0dp</dimen>
+    <dimen name="card_elevation">0dp</dimen>
+    <dimen name="header_padding">16dp</dimen>
+    <dimen name="item_header_textsize">20sp</dimen>
+    <dimen name="item_schedule_margin">12dp</dimen>
+    <dimen name="item_schedule_padding">16dp</dimen>
+    <dimen name="item_schedule_corner_radius">16dp</dimen>
+    <dimen name="iterm_schedule_card_elevation">6dp</dimen>
+    <dimen name="item_schedule_minheight">200dp</dimen>
+    <dimen name="team_selection_margin">8dp</dimen>
+    <dimen name="home_team_margin">4dp</dimen>
+    <dimen name="home_score_text_size">32sp</dimen>
+    <dimen name="scoreseparator_text_size">18sp</dimen>
+
+</resources>
